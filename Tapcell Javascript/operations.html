@@ -1,0 +1,61 @@
+//prompt()-->it will return string value 
+<script type="text/javascript">
+	
+	// let a=prompt("Enter a number");
+	// let b=prompt("Enter another number");
+	// let c=a*b/100;
+	// console.log("Result is "+c);
+	// //if-block
+	//
+	//let age=prompt("enter your age");
+	// if(age>18){
+	// 	console.log("You can Register");
+	// }
+	// if(age<=18)
+	// {
+	// console.log("You can't Register");	
+	// }
+	// if(age>18){
+	// 	console.log("You can Register");
+	// }
+	// else{
+	// 	console.log("You can't Register");
+	// }
+// let balance =3000;
+// let amt=prompt("Enter amout ");
+// if(amt<balance){
+// 	console.log("transaction is under Process")
+// 	balance-=amt;
+// 	console.log("Your current wallet is "+balance);
+// }
+// else if(amt==balance){
+// 	console.log("wallet is Empty");
+// 	// balance-=amt;
+// }
+// else if(amt>balance){
+// console.log("Unable to Process");
+// console.log("Your wallet balance is "+balance);
+// }
+
+
+
+/////////////////////////
+let balance =50000;
+let amt;
+const pin=1234;
+let temp_pin=prompt("Enter your pin ");
+if(pin==temp_pin){
+	amt=prompt("Enter amount");
+	if(amt<=balance){
+		console.log("transaction is successful ");
+		balance-=amt;
+	}
+	else {
+		console.log("Unable to process due to unsufficient balance amount");
+	}
+	console.log("Your current balance is "+balance);
+}
+else {
+   console.log("invalid pin");
+}
+</script>

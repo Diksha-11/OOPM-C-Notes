@@ -1,0 +1,78 @@
+<script type="text/javascript">
+	//Annonomious function
+	let x=function(){
+		return "This is a line";
+	}
+	document.write(x());
+	//Arrow Function 
+	let y=()=>{
+		return 10;
+	}
+	document.write(y());
+let pow=function(a,b){
+return a**b;
+}
+let p=function(){alert('working');}
+// p();
+// document.write(`Hello ${vairable}`)
+//string -->'Hello '
+//email='praveen21@gmail.com'
+//number='45'
+let name="Ravi Kumar";
+document.write(typeof(name));
+let name2=new String("Ravi");
+document.write(typeof(name2));
+if(name==name2){
+	document.write("<h2>both are equals ");
+}
+else document.write("<h2>both aren't equals "); 
+if(name===name2){
+	document.write("<h2>both are equals ");
+}
+else document.write("<h2>both aren't equals "); 
+/////////
+document.write("<h2>Length of name is "+name.length);
+document.write("<h4><u>"+name[5]);
+//charAt(index)
+document.write("<br>charAt(0)="+name.charAt(0));
+//indexOf(str,[startingindex])-->return the index of given substring
+document.write("<br>Index of Kumar "+name.indexOf("Kumar"));
+document.write("<br>Index of a "+name.indexOf("a"));
+document.write("<br>Index of a "+name.indexOf("a",4));
+//lastIndexOf(str)-->it return the index of last occurance of substring 
+let emailid="prave.en.2.1@gmail.com";
+document.write("<br>Last index of . is "+emailid.lastIndexOf("."));
+document.write("<br>index of e "+emailid.search("r"));
+//slice(starting_i,ending_i)-->return a string of given range of index
+document.write("<br>string at index range 3 -7 "+emailid.slice(3,7));
+document.write("<br>string at index range -3 to -1 "+emailid.slice(-3,-1));
+document.write("<br>string at index range 3 "+emailid.slice(3));
+//substring is used to get the substring of a given string 
+//it will not take negative index
+document.write("<br>string at index range 3 -7 "+emailid.substring(3,7));
+//substr(starting_index,number_of_character)
+document.write("<br>string at index range 3 and no of character 7 "+emailid.substr(3,7));
+
+//let change the value of Ravi kumar into  Ravi Singh 
+//replace(oldstr,newstr)
+document.write("<br>Replaced value is "+name.replace("Kumar","Singh"));
+document.write(name);
+let sen="Ravi is a boy. Ravi is also a good student.";
+document.write(sen.replace(/Ravi/g,"Hitesh"));
+//toUpperCase()--> is used to convert the string into upper case 
+document.write("<br>"+sen.toUpperCase());
+document.write("<br>"+sen.toLowerCase());
+//concat() is used to concatenate the string 
+let n="Praveen"+" Kumar"+" ";
+document.write("<br>"+"Ravi".concat(" Mr"," Kumar"," Jawla"));
+// input--> Ravi
+let yourname=" Keshav ";
+document.write("<br>length of yourname is "+yourname.length) ;
+yourname=yourname.trim();
+document.write("<br>length of yourname is "+yourname.length) ;
+//split is used to split string into multiple parts on the basis of given string 
+//split(str)
+document.write("<br>After split the string is "+sen.split("Ravi"));
+
+
+</script>

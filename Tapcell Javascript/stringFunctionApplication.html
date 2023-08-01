@@ -1,0 +1,54 @@
+<script type="text/javascript">
+	//was to check the password and confirm password are equal
+	//length should be 10
+// 	let psw=prompt("Enter  password");
+// 	let cpsw=prompt("Enter  confirm password");
+// 	if((psw.length==10 && cpsw.length==10)){
+// 	if(psw===cpsw){
+// 		document.write("Both password are Matched ");
+// 	}
+// 	else 
+// 		document.write("Both password aren't Matched ");
+// }
+// else document.write("Your password length should be 10");
+
+//let check an email id is 
+// let email=prompt("Enter your email id ");
+// document.write("Ravi".indexOf("s"));
+//let find the .
+// if(email.indexOf("@")>-1 && email.indexOf(".")>-1){
+// 	document.write("@ and .  are found");
+// }
+// else {
+// 	document.write("Invalid email id ")
+// }
+
+function generate(val){
+	// alert(val);
+	let r_number=Math.ceil(Math.random()*10)//0.0435445*10==4
+	console.log(r_number);
+	if(val==r_number)
+	{
+		alert("You Won !");
+	}
+	else alert("You Lose")
+}
+
+</script>
+<body onload="this.style.backgroundColor='#3ac'">
+<button onclick="generate(this.innerHTML)">1</button>
+<button onclick="generate(this.innerHTML)">2</button>
+<button onclick="generate(this.innerHTML)">3</button>
+<button onclick="generate(this.innerHTML)">4</button>
+<button onclick="generate(this.innerHTML)">5</button>
+<button onclick="generate(this.innerHTML)">6</button>
+<button onclick="generate(this.innerHTML)">7</button>
+<button onclick="generate(this.innerHTML)">8</button>
+<button onclick="generate(this.innerHTML)">9</button>
+<button onclick="generate(this.innerHTML)">10</button>
+<button ondblclick="alert('working')">double click</button>
+<form onsubmit="alert('form is submited');"><input type="submit"></form>
+<input type="text" onchange="alert(this.value)">
+<input type="text" onkeypress="alert('keypressed')" onkeyup="alert('keyup')">
+<input type="text" name=""  onkeydown="alert('keydown')">
+</body>

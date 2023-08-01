@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+<p id = "demo">Hello</p>
+<button onclick="process()">Click</button>
+<button onclick="this.style.display='none'">Click</button>
+
+<script type="text/javascript">
+        function process()
+		{
+			document.write("working");
+		}
+const person1 = {
+  myFunction : function() {
+    return this.firstName+" "+this.lastName;
+  }
+};
+const person2 = {
+  firstName  : "Sharma",
+  lastName   : "Diksha",
+};
+let x = person1.myFunction.apply(person2);
+console.log(x);
+//person1.fullName.call(person2); 
+
+  "use strict";
+
+  y = 3.14;   // This will cause an error
+  console.log(y);
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+		<!--function Car(make, model, year) {
+   this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car('Eagle', 'Talon TSi', 1993);
+const car2 = new Car('Eaglee', 'Talon TSii', 1994);
+const car3 = new Car('Eagleee', 'Talon TSiii', 1995);
+console.log(car1);
+console.log(car2);
+console.log(car3);
+
+function ca(){}
+const ca1 = new ca();
+const ca2 = new ca();
+console.log(ca1.color);
+ca.prototype.color  = 'White';
+ca1.color = "Black";
+ca2.color = "pik";
+console.log(ca1.color);
+console.log(ca2.color);
+console.log(Object.getPrototypeOf(ca1).color);
+console.log(Object.getPrototypeOf(ca2).color);
+console.log(ca1);
+console.log(ca2);
+
+document.getElementById("demo").innerHTML = myFunction();
+function myFunction() {
+  return this;
+}
+ -->

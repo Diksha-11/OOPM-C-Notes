@@ -1,0 +1,122 @@
+<script type="text/javascript">
+function Car(make, model, year) {
+   this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car('Eagle', 'Talon TSi', 1993);
+const car2 = new Car('Eaglee', 'Talon TSii', 1994);
+const car3 = new Car('Eagleee', 'Talon TSiii', 1995);
+
+console.log(car1.make);
+console.log(car2.make);
+console.log(car3.make);
+// expected output: "Eagle"
+
+	let ar=[67,20,31,42,52,90];
+//	alert(ar);
+document.write(ar);
+document.write("<h4>Typeof array is "+typeof(ar));
+document.write("<h4>First element of array is "+ar[0]);
+document.write("<h4>Fifth element of array is "+ar[4]);
+document.write("<h3>Length of array is "+ar.length);
+document.write("<br>")
+
+//using for loop print all element 
+for(let i=0;i<ar.length;i++)
+	document.write("<br>Element is : "+ar[i]);
+	
+document.write("<br>");	
+for(let x in ar){
+	document.write("<br>Value of array is : "+ar[x]);
+}
+document.write("<br>")
+for(let x of ar){
+document.write("<br>Value of array is : "+x);	
+}
+
+
+//let take an empty array
+let arr=[];
+//add an element to the array 
+arr[0]="Praveen";
+arr[1]=900;
+arr[2]="Ravi";
+document.write("<h3>"+arr);
+//let update the old value of array 
+arr[0]=235;
+document.write("<h3>"+arr);
+arr[0]=null;
+document.write("<h3>"+arr);
+
+//let find the sum of all element of array 
+let sum=0;
+//[67,20,31,42,52,90]
+for(let x of ar){
+sum+=x;//sum=67    sum=87
+}
+document.write("total of array elements is "+sum);
+
+//let find the max value from the array 
+let max=ar[0];
+for(let x of ar){
+	if(max<x)
+		max=x;
+}
+document.write("<h1> Max value is "+max);
+//swap two elements of array 
+//2 4
+let temp=ar[2];
+ar[2]=ar[4];
+ar[4]=temp;
+document.write("<h3>"+ar);
+let details=[];
+details["id"]=101;
+details["Name"]="Ravi";
+details["email_id"]="ravi@gmail.com";
+document.write("<h3> details are :"+details["Name"]);
+//associated array is kind of array which have a key and a value 
+//Multi dimensional array 
+//We can use array/s inside array 
+//2d 
+let myarray=[
+[101,   102,      103,     104],
+["Ravi","Suresh","Aman","Keshav"]
+];
+document.write(myarray);
+document.write("<h3>"+myarray[1][0]);
+//we can use nested loop
+// for(let i=0;i<3;i++){//0 1 2
+// 	for(let j=0;j<3;j++)//j=0,j=1,j=2
+// 	{
+// document.write("Hello ");
+// 	}
+// 	document.write("<br>");
+// }
+document.write("<br>");
+for(let i=0;i<2;i++){//0
+for(let j=0;j<4;j++)//0
+{
+	document.write(myarray[i][j]+" ");
+}
+document.write("<br>");
+}
+
+
+///////////////////////////////////////
+
+document.write("<table border='2' width='100%'>");
+for(let i=0;i<2;i++){//0
+	document.write("<tr>")
+for(let j=0;j<4;j++)//0
+{
+	document.write("<td>"+myarray[i][j]+"</td>");
+}
+document.write("</tr>");
+}
+document.write("</table>")
+
+
+
+</script>

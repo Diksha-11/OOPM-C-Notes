@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Do while and for loop</title>
+<style type="text/css">img{margin:2%;}</style>
+<script type="text/javascript">
+	//1-3 images print
+	let image_index=1;
+	do{
+     document.write("<img src='n3.jpeg' height='200px' width='200px'>");
+     image_index++;//2 3 4
+	}while(image_index>=3);//2>=3 
+	document.write("<h1>While loop output</h1>");
+	image_index=2;
+	while(image_index<=4){
+     document.write("<img src='n"+image_index+".jpeg' height='200px' width='200px'>");
+     image_index++;//2 3 4
+	};//2>=3 
+for(let i=0;i<30;i++)
+{
+	if(i%7==0){
+	document.write("<br><button>"+(i+1)+"</button>");	
+	}
+	else
+	document.write("<button>"+(i+1)+"</button>");
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

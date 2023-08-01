@@ -1,0 +1,44 @@
+<script type="text/javascript">
+	function sum(){
+		let a=56,b=67,c=a+b;
+		document.write("sum="+c);
+	}
+	// sum();
+	//let multiply the value 
+	function multi(){
+		let a=Number(prompt("Enter a Number"));
+	let b=Number(prompt("Enter a Number"));
+		let c=a+b;
+       document.write(`${a}+${b}=${c}`);
+	}
+	// multi();
+function addition(a,b){
+	let c=Number(a)+Number(b);
+	// document.write("<h3>Result is "+c);
+	document.querySelector("span").innerHTML=c;
+}
+//addition(Number(prompt("Enter a value")),Number(prompt("Enter a value")));
+function Pi(){
+	return 3.14;
+}
+function checkLoan(salary,time,loanamount){
+salary/=2;
+let EligiableAmt=salary*time*12;
+if(loanamount<=EligiableAmt)
+	return true;
+else return false ;
+}
+if(checkLoan(1200,4,200000)){
+	document.write("You are Eligible");
+
+}
+else 
+	document.write("You aren't Eligible");
+
+document.write(Pi());
+</script>
+<input type="number" id="f" value="45"><input type="number" id="s" value="37" >
+<button onclick="addition(document.querySelector('#f').value,document.querySelector('#s').value)"></button>
+<div>Result: <span></span></div>
+<button onclick="alert('Pi is '+Pi())">Get pi</button>
+<!-- <div>Your loan Application REsult is :<span id="loan_res"></span></div> -->

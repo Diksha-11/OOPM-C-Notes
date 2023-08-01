@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom Class1</title>
+	<style type="text/css">
+		.abc{
+			font-size: 30px;
+			color:red;
+		}
+	</style>
+</head>
+<body onload="document.querySelector('#last').focus()">
+<h3 id="h3id" class="abc">This is h3 tag and we are going to access its data</h3>
+
+
+<input type="text" placeholder="Enter your name" id="input">
+<button onclick="process()">Click</button>
+
+
+<p class="abc">This is first P</p>
+<p onmouseover="changeCOlor(this)" onmouseout="changeRed(this)">This is second P</p>
+<p>This is third P</p>
+<h3 class="abc">This is fourth P<h3>
+<button onclick="query_Process()">Process query</button>
+<hr><hr>
+<button onclick="increaseH(document.querySelector('#image'))">Increase Height</button><button onclick="increaseW(document.querySelector('#image'))">Increase Width</button>
+<br>
+<input type="number" placeholder="Enter the height" onkeyup ="changeHeight(this.value,document.querySelector('#image'))" min=1>
+<input type="number" placeholder="Enter the width" oninput ="changeWidth(this.value,document.querySelector('#image'))" min=1>
+<br>
+<img src="https://image.shutterstock.com/image-vector/backlinks-link-building-seo-concept-600w-1597823314.jpg" height="100" width="100" id="image">
+<br><br><br><br>
+<center><button onclick="getPrevious()">Previous</button><img src="n3.jpeg" width="500" height="300" id="i"><button onclick="getNext()">Next</button></center>
+
+<button onclick="imageToggle(this)">Hide</button>
+<hr>
+<button onclick="addCSS()">Add css</button>
+<form >
+	<input type="number" name=""><input type="number" name="" ><input type="number" name=""><input type="number" name="" size="20"><input type="number" name="" size="20"><input type="number" name="" size="20"><input type="number" name="" size="20" id="last">
+</form>
+</body>
+ </html>
+<script type="text/javascript" src="script.js">
+
+</script>

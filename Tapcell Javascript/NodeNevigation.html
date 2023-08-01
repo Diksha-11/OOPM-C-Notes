@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Node nevigation</title>
+</head>
+<body>
+	<div>Hello first </div>
+<ul id="myList"><li >cold drink</li><li id="first">Coffee</li><li>Tea</li></ul>
+<div id="myii">Hello</div>
+<button>click</button>
+<button onclick="createItem()">create a new div </button>
+<button onclick="removeItem()">remove a new div </button>
+<button onclick="replaceItem()">replace</button>
+<br><br>
+<input type="text" name="" id="tagname">
+<input type="text" name="" id="tagdata">
+<button onclick="userItem()">create UserItemDiv</button>
+</body>
+</html>
+<script type="text/javascript">
+	// let list_ref=document.querySelector("#firstList");
+	// alert(list_ref.parentNode.nodeName);
+	// list_ref.parentNode.style.backgroundColor="red";
+	document.querySelector("button").addEventListener("click",abc)
+	function abc(){
+    // let x=document.querySelector("#myList").childNodes[0].innerHTML;
+    let y=document.querySelector("#first").previousSibling.innerHTML;
+    alert(y)
+	}
+	function createItem(){
+		let ele=document.createElement("h1");
+		let text=document.createTextNode("This is new text");
+		ele.appendChild(text);
+		ele.setAttribute("style","color:red");
+       document.querySelector("#myii").appendChild(ele);
+
+	}
+	function userItem(){
+	let ele=document.createElement(document.querySelector("#tagname").value);
+		let text=document.createTextNode(document.querySelector("#tagdata").value);
+		ele.appendChild(text);
+       document.querySelector("#myii").appendChild(ele);	
+	}
+function removeItem(){
+document.querySelector("#myii").removeChild(document.querySelector("h1"));
+
+}
+function replaceItem(){
+	let ele=document.createElement(document.querySelector("#tagname").value);
+		let text=document.createTextNode(document.querySelector("#tagdata").value);
+		ele.appendChild(text);
+document.querySelector("#myii").replaceChild(ele,document.querySelector("h1"));
+
+
+}
+</script>

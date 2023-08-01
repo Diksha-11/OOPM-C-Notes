@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Listener</title>
+	<style type="text/css">
+		.myclass{height: 200px;width: 200px;border: 2px solid gray;border-radius: 5px;margin-bottom: 10px;}
+	</style>
+</head>
+<body onload="abc()">
+	<div class="myclass"></div>
+<button>Click</button>
+<button>Click</button>
+<button>Click</button>
+<button>Click</button>
+<input type="button" value="click" class="">
+<button id="dbl">double click</button>
+</body>
+</html>
+<script type="text/javascript">
+	// let btn=document.querySelector("#btn1");
+function abc(){
+	let btn_ref=document.querySelectorAll("button");
+	let color_array=["red","green","blue","black"];
+	let div_ref=document.querySelector(".myclass");
+	for(let x=0;x<btn_ref.length-1;x++){
+	btn_ref[x].innerHTML=color_array[x];
+	btn_ref[x].addEventListener("click",apply); 
+
+
+	}
+	function apply(){
+		div_ref.style.backgroundColor=color_array[0];
+
+	}
+	document.querySelector("input").addEventListener("click",inputTask)
+	document.querySelector("input").addEventListener("click",function(){
+		// inputTask("")
+	})
+	function inputTask(){
+		alert("input task is working");
+	}
+	document.querySelector("#dbl").addEventListener("click",function(){
+		alert("Event Listener is not working");
+	for(let x=0;x<btn_ref.length-1;x++){
+		btn_ref[x].removeEventListener("click",apply);
+	}
+})
+}
+
+
+	// btn_ref[0].addEventListener("click",function(){alert('Working');});
+	// for(let x of btn_ref){
+
+	// }
+</script>

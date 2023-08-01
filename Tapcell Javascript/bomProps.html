@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bom Props</title>
+	<style type="text/css">
+	   body{
+    background-colorcolor: rgb(43, 70, 226);
+}
+	</style>
+</head>
+<body>
+<button onclick="placeOrder()">Place order </button>
+<input type="text" id="searchInput">
+
+<button onclick="search(document.querySelector('#searchInput').value)">search</button>
+<button onclick="func()">goto Page 1</button>
+<button onclick="funNext()">goto Privious Window</button>
+<button onclick="print()">print</button>
+<button onclick="func2()">goto page 2</button>
+
+<div id="res"></div>
+</body>
+</html>
+<script type="text/javascript">
+	function placeOrder(){
+		if(confirm("Are sure to place order ?")){
+         document.querySelector("#res").innerHTML="Order is placed ";
+		}
+		else{
+			 document.querySelector("#res").innerHTML="Order is cancelled ";
+		}
+	}
+function search(text){
+	// window.location.href="https://www.google.com/search?q="+text;
+	// alert(window.location.pathname)
+	// window.location.assign("https://www.google.com/search?q="+text)
+	window.location.replace("https://www.google.com/search?q="+text);
+}
+function func(){
+	window.location.href="nextPage.html"
+}
+
+function func2(){
+	window.location.href="dom1.html"
+}
+function funNext(){
+	window.history.forward();
+
+}
+</script>
